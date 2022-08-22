@@ -17,5 +17,4 @@ seriestesting
     Log To Console  ${n}
     Log To Console  ${by}
 
-to check the connection
     

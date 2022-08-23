@@ -17,5 +17,5 @@ class Basic:
         
        
     
-calm=Basic()
-print(calm.war_1())
+# calm=Basic()
+# print(calm.war_1())

@@ -12,5 +12,5 @@ class serialtest(object):
         #Send back the received data
         ser.close() 
     
-a=serialtest()
-print(a.test(a))
+# a=serialtest()
+# print(a.test(a))

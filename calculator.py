@@ -4,7 +4,7 @@ class Basic:
     
     def war_1(self,*war):
         for args in war:
-            if args=='apple':
+            if args=='app':
                 return True
         return False
     

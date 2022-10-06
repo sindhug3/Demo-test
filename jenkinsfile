@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/python']], extensions: [], userRemoteConfigs: [[credentialsId: 'bcf85a0e-4f05-48b4-a228-1001879d3366', url: 'https://github.com/sindhug3/Demo-test.git']]])
+            }
+        }    
+        stage('Build') {
+            steps {
+                git branch: 'python', credentialsId: 'bcf85a0e-4f05-48b4-a228-1001879d3366', url: 'https://github.com/sindhug3/Demo-test.git'
+            }
+        }
+        
+        stage('robot') {
+            steps {
+                sh'python -m robot serialtest.robot'
+            }
+        }
+    }
+}
